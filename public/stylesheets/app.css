@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+
+}
+i {
+    font-size: 13px;
+    margin-left: 5px;
+}
+i.icon {
+    font-size: 2em;
+}
+.ui.huge.header {
+    text-align: center;
+    color: #FFBF0A;
+}
+
+.ui.form .field>label {
+    color: #FFBF0A;
+}
+
+.container.main {
+    margin-top: 7.0em;
+}
+.ui.segment {
+    background-color: black;
+    border: black;
+}
+.ui.attached.segment {
+    border: none;
+}
+.ui.cards > .card {
+    background-color: #303037;
+}
+.ui.cards > .card h1, p{
+    color: #FFBF0A;
+}
+.ui.cards > .card button{
+    margin-right: 3px;
+}
+#delete {
+    display: inline;
+}
+#adminHeader {
+    color: #FFBF0A;
+}

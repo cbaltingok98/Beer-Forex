@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Düzenlenen : <%= beer.title %></div>
+    <form class="ui form" action="/beers/<%= beer._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Bira Adı</label>
+            <input type="text" name="beer[title]" value="<%= beer.title %>">
+        </div>
+        <div class="field">
+            <label>Görsel</label>
+            <input type="text" name="beer[image]" value="<%= beer.image %>">
+        </div>
+        <div class="field">
+            <label>Fiyat</label>
+            <input type="text" name="beer[realPrice]" value="<%= beer.realPrice %>"></input>
+        </div>
+        <div class="field">
+            <label>Değişken Fiyat</label>
+            <input type="text" name="beer[currentPrice]" value="<%= beer.currentPrice %>"></input>
+        </div>
+        <input class="ui inverted big green button" type="submit" value="KAYDET">
+    </form>
+</div>
+
+<% include partials/footer %>

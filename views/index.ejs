@@ -1,0 +1,49 @@
+<% include partials/header %>
+
+<div class="ui main text container">
+
+    <div id="adminHeader" class="ui huge header"><h1>Central Ankara Bira Listesi</h1></div>
+    <div class="ui top attached segment">
+        <div class="ui divided cards">
+
+                <% beers.forEach(function(beer){ %>
+                    
+                       
+                            <div class="card">
+                                <div class="content">
+                                <img class="right floated mini ui image" src="<%= beer.image %>">
+                                <div class="header">
+                                    <h1><%= beer.title %></h1>
+                                </div>
+                                <div class="description">
+                                    <p>Fiyat : <%= beer.realPrice %><i class="fas fa-lira-sign"></i></p>
+                                </div>
+                                <div class="description">
+                                    <p>Değişken Fiyat : <%= beer.currentPrice %><i class="fas fa-lira-sign"></i></p>
+                                </div>
+                                </div>
+                                <div class="extra content">
+                                <div class="ui three buttons">
+                                    <form action="/beers/addPrice/<%= beer._id %>?_method=PUT" method="POST">
+                                        <button class="ui inverted green button">+ 0.50</button>
+                                    </form>
+                                    <form action="/beers/subtractPrice/<%= beer._id %>?_method=PUT" method="POST">
+                                        <button class="ui inverted red button">- 0.50</button>
+                                    </form>
+                                    <a class="ui inverted green button" href="/beers/<%= beer._id %>/edit">DÜZENLE</a>
+                                </div>
+                                </div>
+                            </div>
+                        
+                    
+                <% }) %>
+        </div>
+    </div>
+</div>   
+  
+
+
+
+
+
+<% include partials/footer %>

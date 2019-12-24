@@ -1,0 +1,41 @@
+<% include ./partials/priceListHeader %>
+<div class="body">
+  <div class="header">
+    <div class="container">
+      <h1>Central</h1>
+    </div>
+  </div>
+  <div class="list">
+  <div class="container">
+
+      <div class="row firstRow">
+        <div class="col col-sm-6">
+          <H1>BİRALAR</H1>
+        </div>
+        <div class="col col-sm-3">
+          <h1>FİYAT</h1>
+        </div>
+        <div class="col col-sm-3">
+          <h1>ANLIK FİYAT</h1>
+        </div>
+      </div>
+    
+      <% beers.forEach(function(beer) { %>
+        <div class="row">
+          <div class="col col-sm-6">
+            <h1><i class="fas fa-beer"></i><%= beer.title%></h1>
+          </div>
+          <div class="col col-sm-3">
+            <h1><%= beer.realPrice %><i class="fas fa-lira-sign"></i></h1>
+          </div>
+          <div class="col col-sm-3">
+            <h1><%= beer.currentPrice %><i class="fas fa-lira-sign"></i></h1>
+          </div>
+        </div>
+      <% }) %>
+             
+    </div>
+  </div>
+</div>
+
+<% include ./partials/priceListFooter %>

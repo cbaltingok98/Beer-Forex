@@ -1,0 +1,43 @@
+html {
+    background-color: black;
+}
+i {
+    color: #FFBF0A;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.list .container h1 {
+    font-size: 30px;
+}
+.body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 5px;
+}
+.col {
+    background-color: transparent;
+    border: black solid 1px;
+    padding: 10px 0 10px 0;
+    text-align: left;
+}
+
+
+.firstRow {
+    border-bottom: #FFBF0A solid 2px;
+}
+.header {
+    text-align: center;
+    font-family: 'Lakki Reddy', cursive;
+    font-family: 'Kaushan Script', cursive;
+}
+.header .container h1 {
+    color: #FFBF0A;
+    font-size: 70px;
+    margin-bottom: 0;
+}
+

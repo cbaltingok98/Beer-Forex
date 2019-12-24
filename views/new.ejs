@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Yeni Bira Ekle</div>
+    <form class="ui form" action="/beers" method="POST">
+        <div class="field">
+            <label>Bira Adı</label>
+            <input type="text" name="beer[title]" placeholder="Bira Adı">
+        </div>
+        <div class="field">
+            <label>Görsel</label>
+            <input type="text" name="beer[image]" placeholder="Görsel">
+        </div>
+        <div class="field">
+            <label>Fiyat</label>
+            <input type="text" name="beer[realPrice]" placeholder="Fiyat"></textarea>
+        </div>
+        <div class="field">
+            <label>Değişken Fiyat</label>
+            <input type="text" name="beer[currentPrice]" placeholder="Değişken Fiyat"></textarea>
+        </div>
+        <input class="ui inverted big green button" type="submit" value="EKLE">
+        <a class="ui inverted big red button" href="/beers">VAZGEÇ</a>
+    </form>
+</div>
+
+<% include partials/footer %>
