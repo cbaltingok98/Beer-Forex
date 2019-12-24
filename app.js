@@ -42,17 +42,6 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-
-// MONGOOSE/MODEL CONFIG
-let beerSchema = new mongoose.Schema({
-    title: String,
-    image: String, // {type: String, default: "placeholderimage.jpg"}
-    realPrice: Number,
-    currentPrice: Number
-});
-
-let Beer = mongoose.model("Beer", beerSchema);
-
 //RESTFUL ROUTES
 
 app.get("/", function (req, res) {
